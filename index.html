@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>B Fit</title>
 </head>
@@ -16,28 +17,30 @@
     <div class="page-container">
         <header id="header">
             <div class="logo-container">
-                <a class="logo-navbar" href="#index.html">
+                <a class="logo-navbar" href="#home">
                     <img src="/assets/bfit-logo.png" alt="B.Fit logo" id="header-img" width="150x150">
                 </a>
             </div>
             <nav id="nav-bar">
-                <ul class="nav-links">
-                    <li class="nav-item"><a class="nav-link" href="#index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#instructors">Instructors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+                <div id="menu-dropdown">
+                    <button class="menu-item">Menu<i class="fas fa-caret-down space"></i></button>
+                    <ul class="nav-links" id="navLinks">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#instructors">Instructors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main id="main">
             <div class="container">
                 <section id="hero">
                     <div class="hero-intro">
-                        <h1 class="hero-baseline">Let's get fit together</h1>
-                        <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugiat
-                            expedita soluta ipsa. Sint facilis deserunt tempora ut, illum eveniet!</p>
+                        <h1 class="hero-baseline" id="home">Let's get fit together</h1>
+                        <p class="hero-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum fugiat expedita soluta ipsa. Sint facilis deserunt tempora ut, illum eveniet!</p>
                         <form action="https://www.freecodecamp.com/email-submit" method="get" id="form">
                             <fieldset>
                                 <legend>Get your free access !</legend>
@@ -105,42 +108,42 @@
                         <div class="instructor-card">
                             <img src="/assets/pexels-pixabay-247917.jpg" alt="" width="200px">
                             <div class="instructor-description">
-                                <h3 class="instructor-name">Paul Buret</h3>
+                                <h3 class="instructor-name">Paul<br>Buret</h3>
                                 <p class="instructor-discipline">Cardio instructor</p>
                             </div>
                         </div>
                         <div class="instructor-card">
                             <img src="/assets/pexels-shvets-production-6974792.jpg" alt="" width="200px">
                             <div class="card-description">
-                                <h3 class="instructor-name">Mamadou Diaby</h3>
+                                <h3 class="instructor-name">Mamadou<br>Diaby</h3>
                                 <p class="instructor-discipline">Weightlifting instructor</p>
                             </div>
                         </div>
                         <div class="instructor-card">
                             <img src="/assets/pexels-mikhail-nilov-6740056.jpg" alt="" width="200px">
                             <div class="card-description">
-                                <h3 class="instructor-name">Marie Deschamps</h3>
+                                <h3 class="instructor-name">Marie<br>Deschamps</h3>
                                 <p class="instructor-discipline">Crossfit instructor</p>
                             </div>
                         </div>
                         <div class="instructor-card">
                             <img src="/assets/pexels-andrea-piacquadio-927437.jpg" alt="" width="200px">
                             <div class="card-description">
-                                <h3 class="instructor-name">Sean White</h3>
+                                <h3 class="instructor-name">Sean<br>White</h3>
                                 <p class="instructor-discipline">Boxing instructor</p>
                             </div>
                         </div>
                         <div class="instructor-card">
                             <img src="/assets/pexels-andrea-piacquadio-869243.jpg" alt="" width="200px">
                             <div class="card-description">
-                                <h3 class="instructor-name">Mai Nguyen</h3>
+                                <h3 class="instructor-name">Mai<br>Nguyen</h3>
                                 <p class="instructor-discipline">Aerobics instructor</p>
                             </div>
                         </div>
                         <div class="instructor-card">
                             <img src="/assets/pexels-monstera-6311610.jpg" alt="" width="200px">
                             <div class="card-description">
-                                <h3 class="instructor-name">Sarah Habib</h3>
+                                <h3 class="instructor-name">Sarah<br>Habib</h3>
                                 <p class="instructor-discipline">Yoga instructor</p>
                             </div>
                         </div>
@@ -150,8 +153,8 @@
             <div class="container">
                 <section id="membership">
                     <h2 class="heading">Membership options</h2>
-                    <div class="grid-container">
-                        <div class="grid-item">
+                    <div class="membership-container">
+                        <div class="membership-card">
                             <h3 class="membership-option">Basic</h3>
                             <p class="membership-price">39.99 € / month</p>
                             <ul class="features">
@@ -160,10 +163,10 @@
                             </ul>
                             <button type="submit">Subscribe</button>
                         </div>
-                        <div class="grid-item">
+                        <div class="membership-card">
                             <h3 class="membership-option">Standard</h3>
                             <p class="membership-price">79.99 € / month</p>
-                            <ul class="feature">
+                            <ul class="features">
                                 <li class="feature">Lorem ipsum dolor sit amet</li>
                                 <li class="feature">Lorem ipsum dolor sit amet</li>
                                 <li class="feature">Lorem ipsum dolor sit amet</li>
@@ -171,10 +174,12 @@
                             </ul>
                             <button type="submit">Subscribe</button>
                         </div>
-                        <div class="grid-item">
+                        <div class="membership-card">
                             <h3 class="membership-option">Premium</h3>
                             <p class="membership-price">99.99 € / month</p>
-                            <ul class="feature">
+                            <ul class="features">
+                                <li class="feature">Lorem ipsum dolor sit amet</li>
+                                <li class="feature">Lorem ipsum dolor sit amet</li>
                                 <li class="feature">Lorem ipsum dolor sit amet</li>
                                 <li class="feature">Lorem ipsum dolor sit amet</li>
                                 <li class="feature">Lorem ipsum dolor sit amet</li>
@@ -188,45 +193,52 @@
             <div class="container">
                 <section id="about">
                     <h2 class="heading">About us</h2>
-                    <p class="about-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus
-                        itaque
-                        dolores quas molestiae
-                        aspernatur cum beatae, soluta blanditiis ab, neque eaque inventore, corporis repudiandae culpa!
-                        Nemo
-                        assumenda voluptatibus optio laboriosam</p>
+                    <p class="about-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus itaque dolores quas molestiae
+                        aspernatur cum beatae, soluta blanditiis ab, neque eaque inventore, corporis repudiandae culpa! Nemo assumenda voluptatibus optio laboriosam</p>
                 </section>
             </div>
             <div class="container">
                 <section id="contact">
                     <h2 class="heading">Contact us</h2>
+                    <p class="contact-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur optio perferendis laudantium consectetur delectus perspiciatis?</p>
                     <div class="contact-container">
-                        <p class="contact-intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur optio
-                            perferendis
-                            laudantium consectetur delectus perspiciatis?</p>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt fa-fw"></i>Club address<br>123 Lorem ipsum dolor
-                            sit<br>75000 PARIS
+                        <div class="details-container">
+                            <div class="contact-item">
+                                <div class="icon-container">
+                                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                                </div>
+                                <div class="info-container">
+                                    <p class="info">123 Lorem ipsum dolor sit </p>
+                                    <p class="info">75000 PARIS</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon-container">
+                                    <i class="fas fa-phone fa-fw"></i>
+                                </div>
+                                <div class="info-container">
+                                    <p class="info">+331 23 45 67 89</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon-container">
+                                    <i class="fas fa-envelope-open-text fa-fw"></i>
+                                </div>
+                                <div class="info-container">
+                                    <p class="info">b.fit@bfit.com</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone fa-fw"></i>Club phone<br>+331 23 45 67 89
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope-open-text fa-fw"></i>b.fit@bfit.com
-                        </div>
-                        <form class="form-group" action="https://www.freecodecamp.com/email-submit" method="get"
-                            id="form">
+                        <form class="form-group" action="https://www.freecodecamp.com/email-submit" method="get" id="form">
                             <p class="message-intro">Any question ? Feel free to send us a message</p>
                             <label for="first-name">Your first name</label>
-                            <input id="first-name" type="text" name="first-name" placeholder="Enter your first name"
-                                required>
+                            <input id="first-name" type="text" name="first-name" placeholder="Enter your first name" required>
 
                             <label for="last-name">Your Last name</label>
-                            <input id="last-name" type="text" name="last-name" placeholder="Enter your lastname"
-                                required>
+                            <input id="last-name" type="text" name="last-name" placeholder="Enter your lastname" required>
 
                             <label for="phone-number">Your Phone number (optional)</label>
-                            <input id="phone-number" type="tel" name="phone-number"
-                                placeholder="Enter your phone number">
+                            <input id="phone-number" type="tel" name="phone-number" placeholder="Enter your phone number">
 
                             <label for="contact-email">Your Email</label>
                             <input id="contact-email" type="email" name="contact-email" placeholder="Enter your email">
@@ -234,54 +246,74 @@
                             <label for="message">Your message</label>
                             <textarea name="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
 
-                            <label for="terms">
+                            <label for="terms" class="terms">
                                 <input type="checkbox" name="terms" id="terms">
-                                By submitting this form you agree to our <a href="#">privacy policy</a>
+                                <p class="agreement">By submitting this form you agree to our <a href="#">privacy
+                                        policy</a></p>
+
                             </label>
 
                             <button type="submit">Send message</button>
                         </form>
+                    </div>
                 </section>
             </div>
-    </div>
-    </main>
-    <footer id="footer">
-        <div class="container">
-            <img src="/assets/bfit-logo.png" alt="B.Fit logo" width="80">
-            <h4 class="footer-heading">Company</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum magnam quaerat ipsum similique,
-                tempora
-                enim</p>
-            <h4>Quick links</h4>
-            <ul class="section-links">
-                <li class="section-item"><a class="section-link" href="#index.html">Home</a></li>
-                <li class="section-item"><a class="section-link" href="#classes">Classes</a></li>
-                <li class="section-item"><a class="section-link" href="#instructors">Instructors</a></li>
-                <li class="section-item"><a class="section-link" href="#membership">Membership</a></li>
-                <li class="section-item"><a class="section-link" href="#about">About us</a></li>
-                <li class="section-item"><a class="section-link" href="#contact">Contact</a></li>
-            </ul>
-            <h4 class="footer-heading">Useful informations</h4>
-            <ul class="info-links">
-                <li class="info-item"><a class="info-link" href="#">Privacy</a></li>
-                <li class="info-item"><a class="info-link" href="#">Terms</a></li>
-                <li class="info-item"><a class="info-link" href="#">Legal mentions</a></li>
-                <li class="info-item"><a class="info-link" href="#">FAQ</a></li>
 
-            </ul>
-            <h4 class="footer-heading">Connect with us</h4>
-            <ul class="social-links">
-                <li class="social-item"><a class="social-link" href="#"><i
-                            class="fab fa-instagram-square fa-fw"></i>Instagram</a></li>
-                <li class="social-item"><a class="social-link" href="#"><i
-                            class="fab fa-twitter-square fa-fw"></i>Twitter</a></li>
-                <li class="social-item"><a class="social-link" href="#"><i
-                            class="fab fa-facebook-square fa-fw"></i></a>Facebook</li>
-            </ul>
-        </div>
-        <!-- <p class="copyright">&copy Charlotte Mendy - 2021</p> -->
-    </footer>
+        </main>
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-elements">
+                    <img src="/assets/bfit-logo.png" alt="B.Fit logo" width="80">
+                </div>
+                <div class="footer-elements">
+                    <h4 class="footer-heading">Company</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum magnam quaerat ipsum similique,
+                        tempora
+                        enim</p>
+                </div>
+                <div class="footer-elements">
+                    <h4>Quick links</h4>
+                    <ul class="section-links">
+                        <li class="section-item"><a class="section-link" href="#index.html">Home</a></li>
+                        <li class="section-item"><a class="section-link" href="#classes">Classes</a></li>
+                        <li class="section-item"><a class="section-link" href="#instructors">Instructors</a></li>
+                        <li class="section-item"><a class="section-link" href="#membership">Membership</a></li>
+                        <li class="section-item"><a class="section-link" href="#about">About us</a></li>
+                        <li class="section-item"><a class="section-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-elements">
+                    <h4 class="footer-heading">Useful informations</h4>
+                    <ul class="info-links">
+                        <li class="info-item"><a class="info-link" href="#">Privacy</a></li>
+                        <li class="info-item"><a class="info-link" href="#">Terms</a></li>
+                        <li class="info-item"><a class="info-link" href="#">Legal mentions</a></li>
+                        <li class="info-item"><a class="info-link" href="#">FAQ</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-elements">
+                    <h4 class="footer-heading">Connect with us</h4>
+                    <ul class="social-links">
+                        <li class="social-item"><a class="social-link" href="#"><i class="fab fa-instagram-square fa-fw"></i>Instagram</a></li>
+                        <li class="social-item"><a class="social-link" href="#"><i class="fab fa-twitter-square fa-fw"></i>Twitter</a></li>
+                        <li class="social-item"><a class="social-link" href="#"><i class="fab fa-facebook-square fa-fw"></i></a>Facebook</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy Charlotte Mendy - 2021</p>
+        </footer>
     </div>
+    <script>
+        //When menu clicked, shows menu content. By default, content is hidden
+        const menuDropdown = document.getElementById('menu-dropdown');
+        menuDropdown.addEventListener('click', toggle);
+        //console.log(menuDropdown);
+        function toggle() {
+            //console.log('toggle on / off !');
+            navLinks.classList.toggle('toggle');
+        }
+    </script>
 </body>
 
 </html>

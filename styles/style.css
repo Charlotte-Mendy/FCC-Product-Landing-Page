@@ -1,8 +1,4 @@
-/*
-html {
-    font-size: 10px;
-}
-*/
+/* ----------- GENERAL + HEADER + FOOTER ----------- */
 
 * {
     box-sizing: border-box;
@@ -12,6 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     margin: 0;
+    background-color: #F0F0F0;
 }
 
 .page-container {
@@ -21,7 +18,7 @@ body {
 
 #header,
 footer {
-    display: flex;
+    display: block;
     justify-content: space-between;
     color: #fff;
     background-color: #292929;
@@ -30,10 +27,87 @@ footer {
 
 #header {
     margin-bottom: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
+
+#main {
+    padding: 1rem;
+    margin-top: 18rem;
+}
+
+
+label,
+input[type=text],
+input[type=submit],
+input[type=tel],
+input[type=email] {
+    display: block;
+    border-radius: 0.4rem;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+/* ----------- FORM ELEMENTS ----------- */
+
+input[type=text],
+input[type=submit],
+input[type=tel],
+input[type=email] {
+    border: 0.1rem solid #ccc;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+::placeholder {
+    font-size: 1rem;
+}
+
+/* ----------- BUTTONS & INPUT SUBMIT ----------- */
+
+#submit,
+button {
+    display: block;
+    background-color: #ffbd59;
+    opacity: 0.7;
+    color: #292929;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.4rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#submit:hover,
+button:hover {
+    opacity: 1;
+}
+
+/* ----------- TITLES ----------- */
+
+.class-title,
+.instructor-name,
+.membership-option {
+    margin-top: 0.5rem;
+}
+
+/* ----------- NAVIGATION ----------- */
 
 .logo-container {
     padding: 0.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 #nav-bar {
@@ -42,17 +116,32 @@ footer {
     position: sticky;
     right: 0;
     top: 0;
+    padding: 0.5rem;
+}
+
+#menu-dropdown {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+.space {
+    margin-left: 0.5rem;
 }
 
 .nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     list-style-type: none;
+    padding: 0;
+    display: none;
+}
+
+.toggle {
+    display: block;
 }
 
 .nav-item {
     margin: 0;
+    padding: 0.75rem 1rem;
 }
 
 .nav-link {
@@ -67,12 +156,7 @@ footer {
     text-decoration: underline;
 }
 
-.nav-item {}
-
-#main {
-    display: block;
-    padding: 1rem;
-}
+/* ----------- MAIN ----------- */
 
 .container {
     padding: 1rem;
@@ -97,10 +181,6 @@ footer {
     margin-bottom: 3rem;
 }
 
-#form {
-    display: block;
-}
-
 fieldset {
     border: none;
     margin: 0;
@@ -113,172 +193,166 @@ legend {
     text-transform: uppercase;
 }
 
-label,
-input[type=text],
-input[type=submit],
-input[type=tel],
-input[type=email] {
-    display: block;
-    border-radius: 0.4rem;
-    width: 100%;
-}
-
-label {
-    margin-bottom: 0.5rem;
-}
-
-input[type=text],
-input[type=submit],
-input[type=tel],
-input[type=email] {
-    border: 0.1rem solid #ccc;
-    border-radius: 0.4rem;
-    height: 2.5rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-}
-
-::placeholder {
-    font-size: 1rem;
-}
-
-#submit {
-    background-color: #ffbd59;
-    opacity: 0.7;
-    color: #292929;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#submit:hover {
-    opacity: 1;
-}
-
 video {
     display: block;
     margin: 0 auto;
+    margin-right: 0;
     height: auto;
     max-width: 100%;
-
 }
 
-/* ^----------- CLASSES ----------- */
+/* ----------- CLASSES ----------- */
 
 .classes-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .class-card {
     width: 50%;
     text-align: center;
-    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.class-card:nth-child(odd) {
+    padding-right: 0.25rem;
+}
+
+.class-card:nth-child(even) {
+    padding-left: 0.25rem;
 }
 
 .class-card>img {
     max-width: 100%;
 }
 
-/* ^----------- INSTRUCTORS ----------- */
+/* ----------- INSTRUCTORS & MEMBERSHIP CARDS ----------- */
 
-.instructors-container {
+.instructors-container,
+.membership-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /*width: 100%;*/
+    justify-content: center;
 }
 
-.instructor-card {
-    width: 50%;
-    text-align: center;
+.instructor-card,
+.membership-card {
+    background-color: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
     padding: 1rem;
-    /*border: 0.1rem solid #ccc;
-    border-radius: 0.4rem;*/
+    text-align: center;
+    width: 100%;
 }
+
+.membership-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.membership-card .features {
+    flex: 1 1 auto;
+}
+
+/* ----------- INSTRUCTORS ----------- */
 
 .instructor-card>img {
     max-width: 100%;
     max-height: 100%;
 }
 
+.instructor-discipline {
+    margin-bottom: 0.5rem;
+}
 
-/* ^----------- MEMBERSHIP ----------- */
+/* ----------- MEMBERSHIP ----------- */
+
+.membership-option {
+    border: none;
+    padding: 1rem;
+    color: #fff;
+    background-color: #292929;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
 
 .membership-price {
-    font-weight: bold;
-}
-
-button {
-    display: block;
-    background-color: #ffbd59;
-    opacity: 0.7;
     color: #292929;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 0.4rem;
-    height: 2.5rem;
-    width: 100%;
+    font-size: 1.5rem;
+}
+
+.features {
+    list-style-type: none;
+    padding: 0;
+}
+
+.feature {
+    list-style-type: none;
     margin-bottom: 0.5rem;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-button:hover {
-    opacity: 1;
-}
-
-/* ^----------- CONTACT ----------- */
-
+/* ----------- CONTACT ----------- */
 
 .contact-item {
-    display: inline-block;
+    display: flex;
     margin-bottom: 1rem;
-    width: 100%;
+    width: 75%;
+    text-align: left;
 }
 
 .fa-fw {
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+}
+
+.info {
+    margin: 0;
+}
+
+.form-group {
+    margin-top: 2rem;
 }
 
 textarea {
     font-family: 'Roboto', sans-serif;
     border: 0.1rem solid #ccc;
     border-radius: 0.4rem;
-    height: 2.5rem;
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     width: 100%;
 }
 
-input[type=checkbox] {
-    width: 2rem;
-    height: 2rem;
-    vertical-align: middle;
-    margin-left: 0;
-    margin-right: 1.5rem;
-    margin-top: 0;
+.terms {
+    display: flex;
+    padding: 0.75rem 0;
+    align-items: center;
 }
 
-/* ^----------- FOOTER ----------- */
+.agreement {
+    margin: 0;
+}
 
-h4 {
+input[type=checkbox] {
+    vertical-align: middle;
+    height: 2.8rem;
+    width: 2.8rem;
+    margin: 0 1.5rem 0 0;
+    cursor: pointer;
+}
+
+/* ----------- FOOTER ----------- */
+
+.footer-heading {
     margin-bottom: 0.5rem;
 }
 
 .section-links,
 .info-links,
 .social-links {
-    display: block;
     list-style-type: none;
     padding-left: 0;
 }
-
 
 .section-link,
 .info-link,
@@ -293,9 +367,128 @@ h4 {
     text-decoration: underline;
 }
 
+.social-item {
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
 
-.social-link {}
+.fab {
+    font-size: 1.5rem;
+}
 
-.social-link:hover {
+.fab:hover {
     transform: scale(1.5);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    text-align: center;
+    margin: 2rem 0 0 0;
+}
+
+/* ----------- MEDIA QUERIES ----------- */
+
+@media only screen and (min-width: 768px) {
+    #header {
+        display: flex;
+    }
+
+    .menu-item {
+        display: none;
+    }
+
+    .nav-links {
+        overflow: hidden;
+        display: block;
+    }
+
+    .nav-item {
+        float: left;
+        padding: 0.75rem 0.8rem;
+    }
+
+    .nav-link {
+        margin: 0;
+        padding: 0;
+    }
+
+    #main {
+        margin-top: 12.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .nav-item {
+        padding: 0.75rem 1.5rem;
+    }
+
+    #main {
+        margin-top: 12.5rem;
+    }
+
+    #hero {
+        display: flex;
+        width: 100%;
+    }
+
+    .hero-intro {
+        width: 50%;
+    }
+
+    video {
+        width: 40%;
+        margin: auto;
+        height: fit-content;
+    }
+
+    .class-card {
+        width: 30%;
+        margin: 2rem auto;
+    }
+
+    .instructor-card {
+        width: 30%;
+        margin-right: 1rem;
+    }
+
+    .membership-card {
+        width: 30%;
+        margin-right: 1rem;
+    }
+
+
+    .contact-container {
+        display: flex;
+        width: 100%;
+    }
+
+    .details-container {
+        margin-top: 2rem;
+        width: 50%;
+    }
+
+    .form-group {
+        width: 50%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .contact-item {
+        margin-top: 1rem;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-elements {
+        width: 20%;
+        margin: 0 2rem 0 2rem;
+    }
+
+    .section-item,
+    .info-item {
+        margin-bottom: 0.5rem;
+    }
 }

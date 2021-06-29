@@ -343,6 +343,10 @@ input[type=checkbox] {
 
 /* ----------- FOOTER ----------- */
 
+.footer-container {
+    margin-bottom: 3rem;
+}
+
 .footer-heading {
     margin-bottom: 0.5rem;
 }
@@ -356,14 +360,19 @@ input[type=checkbox] {
 
 .section-link,
 .info-link,
-.social-link {
+.social-link, .credits-link {
     color: #fff;
     text-decoration: none;
     transition: 2s;
 }
 
+
+.credits-link:visited {
+    color: #ffbd59;
+}
+
 .section-link:hover,
-.info-link:hover {
+.info-link:hover, .credits-link:hover {
     text-decoration: underline;
 }
 
@@ -380,10 +389,9 @@ input[type=checkbox] {
     transform: scale(1.5);
 }
 
-.copyright {
+.copyright, .credits {
     font-size: 0.8rem;
     text-align: center;
-    margin: 2rem 0 0 0;
 }
 
 /* ----------- MEDIA QUERIES ----------- */
